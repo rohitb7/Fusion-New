@@ -1,0 +1,72 @@
+<div class="table-responsive" style="width: 49%;float: left">
+    <table class="table table-bordered col-sm-2 col-lg-4" ng-repeat="doctor in doctors" style="float: left; margin: 12px; width: 40%;">
+        <tr>
+            <td>
+                <h4>Name:</h4>
+            </td>
+            <td>
+                <h4>Dr. {{doctor.name}}</h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Specality:
+            </td>
+            <td ng-mouseover="specificDoctors(doctor.speciality)">
+                <a href="">{{doctor.speciality}}</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Area:
+            </td>
+            <td ng-mouseover="specificDoctors(doctor.area)">
+                <a href="">{{doctor.area}}</a>
+            </td>
+        </tr>
+        <td>
+            Score:
+        </td>
+        <td>
+            {{doctor.score}}/5
+        </td>
+        </tr>
+    </table>
+</div>
+
+
+<div style="width: 49%; float: left;">
+    <table class="table table-bordered col-sm-2 col-lg-4 jumbotron" ng-repeat="spec in special | orderBy:'sequence'" style="border: 1px solid red; float: left; margin: 12px;width: 40%;">
+        <tr>
+            <td>
+                <h4>Name:</h4>
+            </td>
+            <td>
+                <h4>Dr. {{spec.name}}</h4>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Specality:
+            </td>
+            <td>
+                {{spec.speciality}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Area:
+            </td>
+            <td>
+                {{spec.area}}
+            </td>
+        </tr>
+        <td>
+            Score:
+        </td>
+        <td>
+            {{spec.score}}/5
+        </td>
+        </tr>
+    </table>
+</div>
